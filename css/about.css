@@ -233,10 +233,38 @@ header a {
 
 @media screen and (max-width: 600px) {
     .box-contents {
-      flex-direction: column;
-      align-content: flex-start;
+        margin: auto;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .top-image {
+        width: 100%;
+        margin: auto;
+    }
+
+    header nav {
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        
+    }
+
+    header nav a {
+        padding: 20px;
     }
 
 
+    footer nav a {
+        padding: 15px;
+        margin: auto;
+    }
 
   }

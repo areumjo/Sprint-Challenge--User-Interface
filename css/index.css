@@ -278,3 +278,16 @@ header a {
     align-items: center;
     justify-content: center;
 }
+
+/*  animation on boxes  */
+.boxes {
+    background-color: white;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+}
+
+@keyframes example {
+    from {background-color: white;}
+    to {background-color: rgb(46, 46, 46);}
+}

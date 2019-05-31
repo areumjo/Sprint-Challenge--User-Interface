@@ -135,6 +135,7 @@ footer nav a {
 }
 
 header nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -154,140 +155,116 @@ header a {
     text-decoration: none;
 }
 
-.top-content .text-container {
-    margin-top: 20px;
+.section-top {
+    border-bottom: 1px dashed black;
+    margin-bottom: 10px;
+    padding: 20px;
 }
 
-.box1 {
-    background-color: teal;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
+.box-contents {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.box2 {
-    background-color: gold;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
+.box {
+    margin: 20px;
+    width: 45%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px dashed black;
 }
 
-.box3 {
-    background-color: cadetblue;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.box h3 {
+    margin-top: 20px; 
 }
 
-.box4 {
-    background-color: coral;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#box-col-1 {
+    margin-top: 30px;
 }
 
-.box5 {
-    background-color: crimson;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#box-col-2 {
+    margin-top: 30px;
 }
 
-.box6 {
-    background-color: forestgreen;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.button {
+    width: 150px;
+    padding: 10px;
+    margin: 20px 0 20px 0;
+    border: 2px solid black;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
-.box1 {
-    background-color: teal;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*  animation on buttons */
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 20px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.section-bottom {
+    padding: 20px;
+    margin: 10px 0 20px 0;
 }
 
-.box7 {
-    background-color: darkorchid;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*  responsive  */
 
-.box8 {
-    background-color: hotpink;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@media screen and (max-width: 600px) {
+    .box-contents {
+        margin: auto;
+    }
 
-.box9 {
-    background-color: indigo;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .container {
+        width: 80%;
+        margin: auto;
+    }
 
-.box10 {
-    background-color: dodgerblue;
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .box {
+        width: 100%;
+    }
 
-/*  animation on boxes  */
-.boxes {
-    background-color: white;
-    animation-name: example;
-    animation-duration: 5s;
-    animation-iteration-count: 3;
-}
+    .top-image {
+        width: 100%;
+        margin: auto;
+    }
 
-@keyframes example {
-    from {background-color: white;}
-    to {background-color: rgb(46, 46, 46);}
-}
+    header nav {
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        
+    }
+
+    header nav a {
+        padding: 20px;
+    }
+
+
+    footer nav a {
+        padding: 15px;
+        margin: auto;
+    }
+
+  }
